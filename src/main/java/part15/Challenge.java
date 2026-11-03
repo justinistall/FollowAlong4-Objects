@@ -7,29 +7,66 @@ package part15;
 // test is green. Change only the lines marked YOUR CODE.
 // You learned everything you need for these in parts 06 and 07: if, else, &&, ||, %.
 
+
+
+
 public class Challenge {
 
-    // Rate a party from its snacks and drinks.
-    //   0 (bad)   if snacks OR drinks is less than 5. This rule wins over the others.
-    //   2 (great) if one of them is at least DOUBLE the other.
-    //   1 (good)  otherwise.
-    // partyRating(6, 8)    should return 1
-    // partyRating(3, 8)    should return 0
-    // partyRating(20, 6)   should return 2
+    // Check how good the party is
     public static int partyRating(int snacks, int drinks) {
-        return -1;   // YOUR CODE
+
+        // Bad party if snacks or drinks are less than 5
+        if (snacks < 5 || drinks < 5) {
+            return 0;
+        }
+
+        // Great party if one is at least double the other
+        else if (snacks >= 2 * drinks || drinks >= 2 * snacks) {
+            return 2;
+        }
+
+        // Otherwise it is a good party
+        else {
+            return 1;
+        }
     }
 
-    // Count-off game.
-    //   divisible by 3 AND 5  -> "FizzBuzz"
-    //   divisible by 3 only   -> "Fizz"
-    //   divisible by 5 only   -> "Buzz"
-    //   anything else         -> the number as text, like "7"
-    // fizzBuzz(15)   should return "FizzBuzz"
-    // fizzBuzz(9)    should return "Fizz"
-    // fizzBuzz(7)    should return "7"
-    // Hint: n % 3 == 0 means "n divides evenly by 3". String.valueOf(7) gives "7".
+    // Check if a number is Fizz, Buzz, or FizzBuzz
     public static String fizzBuzz(int n) {
-        return "";   // YOUR CODE
+
+        // Check if divisible by both 3 and 5
+        if (n % 3 == 0 && n % 5 == 0) {
+            return "FizzBuzz";
+        }
+
+        // Check if divisible by 3
+        else if (n % 3 == 0) {
+            return "Fizz";
+        }
+
+        // Check if divisible by 5
+        else if (n % 5 == 0) {
+            return "Buzz";
+        }
+
+        // Otherwise return the number as text
+        else {
+            return String.valueOf(n);
+        }
+    }
+
+    // Main method to run the program
+    public static void main(String[] args) {
+
+        // Test partyRating
+        System.out.println(partyRating(6, 8));
+        System.out.println(partyRating(3, 8));
+        System.out.println(partyRating(20, 6));
+
+        // Test fizzBuzz
+        System.out.println(fizzBuzz(15));
+        System.out.println(fizzBuzz(9));
+        System.out.println(fizzBuzz(10));
+        System.out.println(fizzBuzz(7));
     }
 }
