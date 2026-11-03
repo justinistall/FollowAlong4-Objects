@@ -15,6 +15,51 @@ package part15;
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. The README shows an example.
 
+
+
+
 public class FinalKeyword {
 
+    // Start the program
+    public static void main(String[] args) {
+
+        // Create a final variable for pi
+        final double PI = 3.14159;
+
+        // Print the value of pi
+        System.out.println(PI);
+
+        // Create a final variable for age
+        final int AGE = 20;
+
+        // Print the age
+        System.out.println(AGE);
+
+        // Create a final String variable
+        final String NAME = "Justin";
+
+        // Print the name
+        System.out.println(NAME);
+
+        // Create a radius variable
+        double radius = 5.0;
+
+        // Calculate the area of a circle
+        double area = PI * radius * radius;
+
+        // Print the area
+        System.out.println("Area: " + area);
+
+        // Create a regular variable
+        int number = 10;
+
+        // Change the regular variable
+        number = 20;
+
+        // Print the new number
+        System.out.println(number);
+
+        // Final variables cannot be changed after assignment
+        // PI = 3.14; would cause an error
+    }
 }
