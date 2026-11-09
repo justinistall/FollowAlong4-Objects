@@ -14,6 +14,28 @@ package part19;
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. Do this in Friend.java too.
 
+
+
+
+// This class starts the program.
 public class StaticKeyword {
 
+    // This is where the program starts.
+    public static void main(String[] args) {
+
+        // Create the first friend.
+        Friend friend1 = new Friend("Spongebob");
+
+        // Create the second friend.
+        Friend friend2 = new Friend("Patrick");
+
+        // Create the third friend.
+        Friend friend3 = new Friend("Squidward");
+
+        // Print the total number of friends.
+        System.out.println(Friend.numberOfFriends);
+
+        // Call the static method to show the total.
+        Friend.displayFriends();
+    }
 }
