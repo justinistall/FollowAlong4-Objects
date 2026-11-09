@@ -16,6 +16,19 @@ package part16;
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    in THIS file AND in DiceRoller.java, saying in YOUR OWN WORDS what that line does.
 
+
+
+
+// This class runs the program.
 public class VariableScope {
 
+    // This is where the program starts.
+    public static void main(String[] args) {
+
+        // Create a new dice roller.
+        DiceRoller diceRoller = new DiceRoller();
+    }
 }
+
+
+

@@ -16,6 +16,30 @@ package part16;
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    in THIS file AND in Human.java, saying in YOUR OWN WORDS what that line does.
 
+
+
+
 public class Constructors {
 
+    // This is where the program starts running.
+    public static void main(String[] args) {
+
+        // Create a human named Rick who is 30 years old.
+        Human human1 = new Human("Rick", 30, 70.5);
+
+        // Create another human named Morty who is 15.
+        Human human2 = new Human("Morty", 15, 50.0);
+
+        // Print the first human's name.
+        System.out.println(human1.name);
+
+        // Print the second human's name.
+        System.out.println(human2.name);
+
+        // Make the first human eat.
+        human1.eat();
+
+        // Make the second human drink.
+        human2.drink();
+    }
 }
