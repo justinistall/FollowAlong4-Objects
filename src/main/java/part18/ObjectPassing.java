@@ -14,6 +14,21 @@ package part18;
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. Do this in Garage.java and Car.java too.
 
+
+
+// This class starts the program.
 public class ObjectPassing {
 
+    // This is where the program begins.
+    public static void main(String[] args) {
+
+        // Create a garage object.
+        Garage garage = new Garage();
+
+        // Create a car object.
+        Car car = new Car("BMW");
+
+        // Send the car to the garage.
+        garage.park(car);
+    }
 }
