@@ -8,22 +8,52 @@ package part20;
 // SECTION D — Challenge. Two methods. The test in src/test/java/part20/ChallengeTest.java checks them.
 // Change only the lines marked YOUR CODE. The README explains each one.
 
+
+
+
 public class Challenge {
 
-    // A lottery ticket has three numbers.
-    //   all three the same                          → 10
-    //   b and c are BOTH different from a           → 5
-    //   anything else                               → 0
-    //   ticketResult(2, 2, 2) → 10     ticketResult(1, 2, 3) → 5     ticketResult(2, 2, 1) → 0
+    // Check the lottery ticket numbers.
     public static int ticketResult(int a, int b, int c) {
-        return 0;   // YOUR CODE
+
+        // All three numbers match.
+        if (a == b && b == c) {
+            return 10;
+        }
+
+        // Both b and c are different from a.
+        if (a != b && a != c) {
+            return 5;
+        }
+
+        // Otherwise, no points.
+        return 0;
     }
 
-    // true if x and y show up the same number of times inside s.
-    //   sameCount("catdog", "cat", "dog")   → true    (once each)
-    //   sameCount("catcat", "cat", "dog")   → false   (twice and zero times)
-    //   sameCount("", "cat", "dog")         → true    (zero each)
+    // Check if two strings appear the same number of times.
     public static boolean sameCount(String s, String x, String y) {
-        return false;   // YOUR CODE
+
+        // Count how many times x appears.
+        int countX = 0;
+
+        // Count how many times y appears.
+        int countY = 0;
+
+        // Check each possible starting position for x.
+        for (int i = 0; i <= s.length() - x.length(); i++) {
+            if (s.startsWith(x, i)) {
+                countX++;
+            }
+        }
+
+        // Check each possible starting position for y.
+        for (int i = 0; i <= s.length() - y.length(); i++) {
+            if (s.startsWith(y, i)) {
+                countY++;
+            }
+        }
+
+        // Return true if the counts match.
+        return countX == countY;
     }
 }
