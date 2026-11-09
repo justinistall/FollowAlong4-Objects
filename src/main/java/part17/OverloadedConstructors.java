@@ -14,6 +14,43 @@ package part17;
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. Do this in Pizza.java too.
 
+
+
+
+// This class starts the program.
 public class OverloadedConstructors {
 
+    // This is where the program begins.
+    public static void main(String[] args) {
+
+        // Create a pizza with all four ingredients.
+        Pizza pizza1 = new Pizza("Thick crust", "Tomato", "Mozzarella", "Pepperoni");
+
+        // Create a pizza with three ingredients.
+        Pizza pizza2 = new Pizza("Thin crust", "Tomato", "Cheddar");
+
+        // Create a pizza with two ingredients.
+        Pizza pizza3 = new Pizza("Regular crust", "BBQ");
+
+        // Create a pizza with only a crust.
+        Pizza pizza4 = new Pizza("Stuffed crust");
+
+        // Print the first pizza's ingredients.
+        System.out.println(pizza1.bread);
+        System.out.println(pizza1.sauce);
+        System.out.println(pizza1.cheese);
+        System.out.println(pizza1.topping);
+
+        // Print the second pizza's ingredients.
+        System.out.println(pizza2.bread);
+        System.out.println(pizza2.sauce);
+        System.out.println(pizza2.cheese);
+
+        // Print the third pizza's ingredients.
+        System.out.println(pizza3.bread);
+        System.out.println(pizza3.sauce);
+
+        // Print the fourth pizza's crust.
+        System.out.println(pizza4.bread);
+    }
 }

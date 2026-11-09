@@ -14,6 +14,22 @@ package part17;
 // SECTION B — COMMENTS: when you finish, put a // comment ABOVE every line of code,
 //    saying in YOUR OWN WORDS what that line does. Do this in Car.java too.
 
+
+
+
+// This class starts the program.
 public class ToStringMethod {
 
+    // This is where the program begins.
+    public static void main(String[] args) {
+
+        // Create a car object.
+        Car car = new Car();
+
+        // Print the car using its toString method.
+        System.out.println(car);
+
+        // Print the car information directly.
+        System.out.println(car.toString());
+    }
 }
